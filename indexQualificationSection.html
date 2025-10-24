@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualification Timeline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0d4d5c 0%, #1a5f73 50%, #0d4d5c 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            color: #ff6b6b;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+
+        .section-title .education {
+            color: #ff6b6b;
+        }
+
+        .section-title .work {
+            color: #64b5f6;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            top: 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item.left {
+            justify-content: flex-start;
+        }
+
+        .timeline-item.right {
+            justify-content: flex-end;
+        }
+
+        .timeline-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px;
+            width: 45%;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+        }
+
+        .timeline-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .timeline-card p {
+            font-size: 1rem;
+            color: #b0c4d0;
+            margin-bottom: 8px;
+        }
+
+        .timeline-card .date {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #90a4ae;
+        }
+
+        .timeline-card .date::before {
+            content: '📅';
+            font-size: 0.85rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            border: 4px solid #0d4d5c;
+            z-index: 2;
+        }
+
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            width: 80px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .timeline-item.left .timeline-connector {
+            transform: translateX(-100%);
+            right: 50%;
+        }
+
+        .timeline-item.right .timeline-connector {
+            transform: translateX(0);
+            left: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                justify-content: flex-end !important;
+            }
+
+            .timeline-card {
+                width: calc(100% - 80px);
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .timeline-connector {
+                left: 30px !important;
+                width: 40px;
+                transform: translateX(0) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Qualification</h1>
+            <p>My personal journey</p>
+            <div class="section-title">
+                <span class="education">Education</span>/<span class="work">Work</span>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-card">
+                    <h3>Electrical Engineering</h3>
+                    <p>NIT Hamirpur</p>
+                    <div class="date">2024-2028</div>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-card">
+                    <h3>Senior Secondary (PCM)</h3>
+                    <p>GSSS Gullarwala</p>
+                    <div class="date">2021-2023</div>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-card">
+                    <h3>High School</h3>
+                    <p>GHS Billanwali</p>
+                    <div class="date">2016-2021</div>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-card">
+                    <h3>Frontend Developer</h3>
+                    <p>NIT Hamirpur</p>
+                    <div class="date">2024-2025</div>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-card">
+                    <h3>NCC NAVY</h3>
+                    <p>NIT Hamirpur</p>
+                    <div class="date">2024-2027</div>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
