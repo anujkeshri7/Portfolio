@@ -10,7 +10,7 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript, fea
 - **Interactive Elements**: Dynamic skill progress bars and interactive navigation
 - **Contact Form**: Functional contact form with validation
 - **Modern UI**: Clean, professional design with gradient backgrounds
-
+ 
 ## 📁 Project Structure
 
 ```
